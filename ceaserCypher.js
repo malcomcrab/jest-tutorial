@@ -1,26 +1,28 @@
 
-const cypher = 'abcdefghijklmnopqrstuvwxyz'
-var punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 
-function ceaserCypher(string, shift){
+const cypher = 'abcdefghijklmnopqrstuvwxyz'
+var punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~" "'
+
+function ceaserCypher(string, shift) {
 
     let split = string.split('')
-
     const newString = split.map(letter => {
-        
+
         if (punctuation.includes(letter)) {
             return letter
-        } else {
-            let newIndex = cypher.indexOf(letter) + shift
-            if(newIndex >= 26){
-                newIndex -= 26
+        } 
+            
+        let newIndex = cypher.indexOf(letter.toLowerCase()) + shift
+        if (newIndex >= 26) {
+            newIndex -= 26
             }
-            return cypher[newIndex] 
-        }
+        
+        return letter != letter.toUpperCase(letter) ? cypher[newIndex] : cypher[newIndex].toUpperCase(letter)
+        
 
     })
     return newString.join('')
-    
+
 }
 
 module.exports = ceaserCypher
