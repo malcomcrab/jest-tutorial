@@ -2,7 +2,7 @@ const capitalise = require("./capitalise")
 
 
 const cypher = 'abcdefghijklmnopqrstuvwxyz'
-var punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~" "'
+var punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~" "1234567890'
 
 function ceaserCypher(string, shift) {
     //split string to array so i can iterate over the array. 

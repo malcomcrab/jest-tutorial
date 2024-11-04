@@ -18,11 +18,11 @@ test('Return the letters shifted to three spaces testing wrap back to abc after 
 })
 
 test('Return letters shifted three spaces, testing wrap to a after z as well as punctuation staying the same', () => {
-    expect(ceaserCypher('(xyz!)',3)).toBe('(abc!)')
+    expect(ceaserCypher('(x2yz!)',3)).toBe('(a2bc!)')
 })
 
 test('Testing the previous but with a phrase', () => {
-    expect(ceaserCypher('(hello world!)',3)).toBe('(khoor zruog!)')
+    expect(ceaserCypher('(h3ll0 world!)',3)).toBe('(k3oo0 zruog!)')
 })
 
 test('Testing capitals are returned capitalised after shifting. ', () => {
